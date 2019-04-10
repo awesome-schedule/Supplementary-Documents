@@ -1,0 +1,185 @@
+\documentclass[dvips,12pt]{article}
+
+% Any percent sign marks a comment to the end of the line
+
+% Every latex document starts with a documentclass declaration like this
+% The option dvips allows for graphics, 12pt is the font size, and article
+%   is the style
+
+\usepackage[pdftex]{graphicx}
+\usepackage{url}
+\usepackage{CJKutf8}
+
+
+% These are additional packages for "pdflatex", graphics, and to include
+% hyperlinks inside a document.
+
+\setlength{\oddsidemargin}{0.25in}
+\setlength{\textwidth}{6.5in}
+\setlength{\topmargin}{0in}
+\setlength{\textheight}{8.5in}
+
+% These force using more of the margins that is the default style
+
+\begin{document}
+
+% Everything after this becomes content
+% Replace the text between curly brackets with your own
+
+\title{Awesome-SchedulAR}
+\author{Zichao Hu, Hanzhi Zhou, Kaiying Shan}
+\date{\today}
+
+% You can leave out "date" and it will be added automatically for today
+% You can change the "\today" date to any text you like
+
+
+\maketitle
+
+% This command causes the title to be created in the document
+
+\section{Executive Summary}
+
+% An article style is separated into sections and subsections with 
+%   markup such as this.  Use \section*{Principles} for unnumbered sections.
+
+Awesome-SchedulAR is an open-source online scheduling website which aims to serve as 
+a complement component of Student Information System (SIS) and other 
+online scheduling websites, and allow students at
+UVa to schedule their classes more efficiently. This is an ongoing 
+project undertaken by the current undergraduate students of UVa. 
+The project aims to address the issue of the current system, which is
+that one online website is difficult to meet the needs of all students.
+We hope to develop an adaptive website which will fit into the needs 
+of the current students. In order to achieve so, we hope to 
+develop this project and use it to serve as an open-source platform 
+so that interested students/developers will be able to add whatever 
+features they see fit. For this project, we have currently developed 
+a functional scheduler, and new features are under. In the future, we hope to launch the project and 
+engage an interested student community to maintain the website. 
+
+
+
+
+
+
+\section{Background}
+
+\begin{center}
+\resizebox{6in}{!}{\includegraphics*{sample_distribution}}
+\end{center}
+    
+\begin{center}
+\resizebox{6in}{!}{\includegraphics*{UI_feedback}}
+\end{center}
+
+\begin{center}
+\resizebox{6in}{!}{\includegraphics*{potential_user}}
+\end{center}
+
+\begin{center}
+\resizebox{6in}{!}{\includegraphics*{potential_user2}}
+\end{center}
+
+
+
+
+
+\section{Buget}
+A preliminary budget: 
+\begin{enumerate}
+    \item Developing:
+    \begin{itemize}
+        \item Google Maps Platform
+        \item Google Analytics
+    \end{itemize}
+    \item Marketing:
+    \begin{itemize}
+        \item NCH Debut Video Capture: 50.00\$
+        \item Wondershare Filmora9: 60.00\$
+        \item Flyer: 30\$
+        \item Other: 200\$
+    \end{itemize}
+    \item Maintenance
+    \begin{itemize}
+        \item 
+    \end{itemize}
+
+\end{enumerate}
+
+\section{Developing Plan}
+\begin{enumerate}
+    \item Sticker Note Feature: \\
+    \begin{itemize}
+        \item Allow user to customize some time blocks 
+        and insert notes to the time blocks, \textbf{e.g.} "Club meeting".
+        \item User can set color for each sticker note.
+        \item If serveral sticker notes have overlapping area, make each note occupy 
+        part of the space and display all the notes parallel to each other, \textbf{e.g.} See Coursicle
+        \item Let the users choose if each sticker note can overlap with the no-class time filter.
+        \item To avoid confusion, have two separate spots for no class time and sticker notes, 
+        even though sticker notes may also serve as the function of no class time, 
+        \textbf{e.g.} to achive this we can add a new side bar only dedicate to the sticker note feature.
+    \end{itemize}
+    
+    \item Comparison Feature
+    \begin{itemize}
+        \item Under comparison Mode, ignore the Sticker Notes Feature
+        \item Compare two schedule side by side
+        \item Use your imagination and creativity to make it look good and handy to use
+    \end{itemize}
+
+    \item Grade Distribution
+    \begin{itemize}
+        \item Create a grade distribution info for each class (not each professor
+        because we do not know if the professor will still teach the class or not)
+        \item Like the button of \textbf{"Click for more details (Lou's List)"}, 
+        make a button next to it to show the grade distribution
+        \item \textbf{Remark:} Look at the Lou's List, 
+        if you click on the title of each class, e.g. CS 2110.
+        There will be a pop in "Course Selection Guide". Get the data and incorporate 
+        in our grade distribution
+    \end{itemize}
+
+    \item Class Distance Feature
+    \begin{itemize}
+        \item Create data matrix of all the buildings on Ground with their respective data
+        \item Still use the "combine class" method. For each class time with
+        multiple sections combined, use the section with the best distance 
+        to represent those sections. Under more info, it will tell the class distance
+        (in terms of time) to the previous class and the next class. 
+        \item We should not calculate the class distance if the time betwen two classes are over 30 minutes.
+        \item On the sidebar, we provide a new button which gives route overview of the schedule. 
+        it will show the classes taken place on the google map, and the route between each class
+    \end{itemize}
+
+    \item Unit Test
+
+    \item Export Data Feature
+    \begin{itemize}
+        \item Incorporate features to allow the user to add our schedule on their
+        google calendar, or apple calendar
+    \end{itemize}
+
+    \item Better Mobile UI interface
+    \begin{itemize}
+        \item More detail discuss later
+    \end{itemize}
+
+    \item A what if scenario
+    \begin{itemize}
+        \item Use the data from SIS to create the what if scenario
+    \end{itemize}
+    
+\end{enumerate}
+
+Things to heed from the results of our survey:
+\begin{itemize}
+    \item "accomodate to the new english program"
+    \item "Make the class blocks more visually appealing, they are too plain right now" \(\times4\)
+    \item "Share the class with friends" -- maybe for the comparison, we can compare with friends schedule?
+    \item "The project is great. You guys are awesome"
+    \item :)
+\end{itemize}
+
+\end{document}

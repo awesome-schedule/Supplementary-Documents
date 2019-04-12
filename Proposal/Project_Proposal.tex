@@ -1,4 +1,4 @@
-\documentclass[dvips,12pt]{article}
+\documentclass[letterpaper,11pt]{article}
 
 % Any percent sign marks a comment to the end of the line
 
@@ -9,6 +9,26 @@
 \usepackage[pdftex]{graphicx}
 \usepackage{url}
 \usepackage{CJKutf8}
+\usepackage[pdftex]{graphicx}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[TS1,T1]{fontenc}
+\usepackage{fourier, heuristica}
+\usepackage{array, booktabs}
+\usepackage{graphicx}
+\usepackage[x11names,table]{xcolor}
+\usepackage{caption}
+\DeclareCaptionFont{blue}{\color{LightSteelBlue3}}
+\usepackage{xcolor}
+\usepackage{float}
+\newcommand\ytl[2]{
+\parbox[b]{15em}{\hfill{\color{cyan}\bfseries\sffamily #1}~
+$\cdots\cdots$~}\makebox[0pt][c]{$\bullet$}\vrule\quad 
+\parbox[c]{15cm}{\vspace{7pt}\color{red!40!black!80}\raggedright\sffamily 
+#2.\\[7pt]}\\[-3pt]}
+
+
 
 
 % These are additional packages for "pdflatex", graphics, and to include
@@ -64,7 +84,8 @@ engage an interested student community to maintain the website.
 
 
 \section{Background}
-
+We took a survey after the beta version launch. The survey gives us many positive 
+feedbacks. 
 \begin{center}
 \resizebox{6in}{!}{\includegraphics*{sample_distribution}}
 \end{center}
@@ -81,6 +102,33 @@ engage an interested student community to maintain the website.
 \resizebox{6in}{!}{\includegraphics*{potential_user2}}
 \end{center}
 
+
+\section{TimeLine}
+
+\begin{table}[H]
+    \caption{Timeline of Awesome Schedule}
+    \centering
+    \begin{minipage}[t]{1.2\linewidth}
+    \color{gray}
+    \rule{\linewidth}{1pt}
+    \ytl{03/02/2019}{Hackathon: the Beginning of the Project}
+    \ytl{03/31/2019}{Beta Version Initial Launch}
+    \ytl{04/05/2019}{Presentation During CS 2110 Class. Get Endorsed by Professor Basit}
+    \ytl{04/09/2019}{Cooperation with CSSS}
+    \ytl{04/14/2019}{Cooperation with MSN}
+    \ytl{Before 05/2019}{Cooperation with Orientation Leaders}
+    \ytl{05/2019}{Create Serv List}
+    \ytl{07/2019}{Present to the Class of 2023 Chinese Students During Sendoff}
+    \ytl{08/24/2019}{Activity Fair Tabling}
+    \ytl{09/2019}{Get Endorsed by Lou's List}
+
+
+
+   
+    \bigskip
+    \rule{\linewidth}{1pt}%
+    \end{minipage}%
+    \end{table}
 
 
 
@@ -102,7 +150,7 @@ A preliminary budget:
     \end{itemize}
     \item Maintenance
     \begin{itemize}
-        \item 
+        \item 200\$
     \end{itemize}
 
 \end{enumerate}

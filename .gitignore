@@ -2,3 +2,4 @@
 *.aux
 *latexmk
 *.fls
+*.gz

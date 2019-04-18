@@ -3,3 +3,6 @@
 *latexmk
 *.fls
 *.gz
+*.lof
+*.lot
+*.toc

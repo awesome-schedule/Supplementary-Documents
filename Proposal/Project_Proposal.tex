@@ -1,6 +1,12 @@
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,12pt]{article}
 
 % Any percent sign marks a comment to the end of the line
+
+% character encoding
+\usepackage[utf8]{inputenc}
+\usepackage{fontawesome}
+\usepackage{tabularx}
+\usepackage{ragged2e}
 
 % Every latex document starts with a documentclass declaration like this
 % The option dvips allows for graphics, 12pt is the font size, and article
@@ -20,14 +26,12 @@
 \usepackage[x11names,table]{xcolor}
 \usepackage{caption}
 \DeclareCaptionFont{blue}{\color{LightSteelBlue3}}
-\usepackage{xcolor}
 \usepackage{float}
 \newcommand\ytl[2]{
-\parbox[b]{15em}{\hfill{\color{cyan}\bfseries\sffamily #1}~
+\parbox[b]{12em}{\hfill{\color{cyan}\bfseries\sffamily #1}~
 $\cdots\cdots$~}\makebox[0pt][c]{$\bullet$}\vrule\quad 
 \parbox[c]{15cm}{\vspace{7pt}\color{red!40!black!80}\raggedright\sffamily 
 #2.\\[7pt]}\\[-3pt]}
-
 
 
 
@@ -41,29 +45,52 @@ $\cdots\cdots$~}\makebox[0pt][c]{$\bullet$}\vrule\quad
 
 % These force using more of the margins that is the default style
 
+
+\title{
+    \resizebox{6in}{!}{\includegraphics*{Logo}}\\
+   }
+
+
+
+
+
 \begin{document}
 
 % Everything after this becomes content
 % Replace the text between curly brackets with your own
 
-\title{Awesome-SchedulAR}
-\author{Zichao Hu, Hanzhi Zhou, Kaiying Shan}
-\date{\today}
 
+
+\maketitle
 % You can leave out "date" and it will be added automatically for today
 % You can change the "\today" date to any text you like
 
 
-\maketitle
+
+\begin{center}
+    \textbf{University of Viriginia, Charlottsville, VA, 22904} \\
+    \rule{\textwidth}{1.2pt}
+    \begin{tabular}{ c c c }
+        \faGlobe https://awesome-schedule.github.io/ & \faGithub\enspace https://github.com/awesome-schedule 
+    \end{tabular}
+\end{center}
 
 % This command causes the title to be created in the document
 
+\newpage
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+
+\newpage
 \section{Executive Summary}
 
 % An article style is separated into sections and subsections with 
 %   markup such as this.  Use \section*{Principles} for unnumbered sections.
 
-Awesome-SchedulAR is an open-source online scheduling website which aims to serve as 
+Awesome-Schedule is an open-source online scheduling website which aims to serve as 
 a complement component of Student Information System (SIS) and other 
 online scheduling websites, and allow students at
 UVa to schedule their classes more efficiently. This is an ongoing 
@@ -80,27 +107,42 @@ engage an interested student community to maintain the website.
 
 
 
+\section{Team Profile}
 
+\begin{description}
+    \item[Zichao Hu] Chief Manager
+    \item[Hanzhi Zhou] Chief Developer
+    \item[Kaiying Shan] Cheif Developer
+    \item[Yan Ju] Chief Marketer
+\end{description}
 
 
 \section{Background}
 We took a survey after the beta version launch. The survey gives us many positive 
 feedbacks. 
-\begin{center}
+\begin{figure}
 \resizebox{6in}{!}{\includegraphics*{sample_distribution}}
-\end{center}
+\caption{Participant Distribution}
+\label{fig:Participant Distribution}
+\end{figure}
     
-\begin{center}
-\resizebox{6in}{!}{\includegraphics*{UI_feedback}}
-\end{center}
+\begin{figure}
+\resizebox{6in}{!}{\includegraphics{UI_feedback}}
+\caption{UI Feedback}
+\label{fig:UI Feedback}
+\end{figure}
 
-\begin{center}
-\resizebox{6in}{!}{\includegraphics*{potential_user}}
-\end{center}
+\begin{figure}
+\resizebox{6in}{!}{\includegraphics{potential_user}}
+\caption{Potential Users}
+\label{fig:Potential Users}
+\end{figure}
 
-\begin{center}
-\resizebox{6in}{!}{\includegraphics*{potential_user2}}
-\end{center}
+\begin{figure}
+\resizebox{6in}{!}{\includegraphics{potential_user2}}
+\caption{Potential Users Recommendation}
+\label{fig:Potential Users Recommendation}
+\end{figure}
 
 
 \section{TimeLine}
@@ -113,11 +155,13 @@ feedbacks.
     \rule{\linewidth}{1pt}
     \ytl{03/02/2019}{Hackathon: the Beginning of the Project}
     \ytl{03/31/2019}{Beta Version Initial Launch}
-    \ytl{04/05/2019}{Presentation During CS 2110 Class. Get Endorsed by Professor Basit}
+    \ytl{04/05/2019}{Presentation During CS 2110 Class.\\
+    Get Endorsed by Professor Basit}
     \ytl{04/09/2019}{Cooperation with CSSS}
     \ytl{04/14/2019}{Cooperation with MSN}
-    \ytl{Before 05/2019}{Cooperation with Orientation Leaders}
-    \ytl{05/2019}{Create Serv List}
+    \ytl{Before 05/2019}{Converstation with University Officials}
+    \ytl{Before School Ends}{Recruit Potential Student Contributors}
+    \ytl{05/2019}{Create Email List}
     \ytl{07/2019}{Present to the Class of 2023 Chinese Students During Sendoff}
     \ytl{08/24/2019}{Activity Fair Tabling}
     \ytl{09/2019}{Get Endorsed by Lou's List}
@@ -138,20 +182,22 @@ A preliminary budget:
 \begin{enumerate}
     \item Developing:
     \begin{itemize}
-        \item Google Maps Platform
-        \item Google Analytics
+        \item Google Maps Platform: Data Request 100\$
+        \item Google Analytics: Free
     \end{itemize}
     \item Marketing:
     \begin{itemize}
-        \item NCH Debut Video Capture: 50.00\$
-        \item Wondershare Filmora9: 60.00\$
+        \item Beta Version Launch Promotional Product: 150\$
+        \item Editing Software: 60\$
+        \item QRCode Generator: 60\$
         \item Flyer: 30\$
-        \item Other: 200\$
+        \item Marketing Promotional Product/Poster/Tabling: 350\$
     \end{itemize}
-    \item Maintenance
+    \item Maintenance \& Future Cost
     \begin{itemize}
-        \item 200\$
+        \item 150\$
     \end{itemize}
+    \item  Total: 900\$
 
 \end{enumerate}
 
@@ -219,6 +265,12 @@ A preliminary budget:
         \item Use the data from SIS to create the what if scenario
     \end{itemize}
     
+    \item "What's Cool on Ground" Feature
+    \begin{itemize}
+        \item add outside link to UVa CIO for advertisement. Help small but interesting CIO to get more publicity
+        \item add outside link to support UVa student startup. 
+        \item Provide students a new way to find interesting things going on on Ground
+    \end{itemize}
 \end{enumerate}
 
 Things to heed from the results of our survey:
